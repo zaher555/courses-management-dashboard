@@ -1,0 +1,110 @@
+<div class="flex justify-center">
+    <div class="sm:w-1/4 md:w-1/2 bg-gray-100 p-8">
+        @if(courseId){
+            <h1 class="text-center text-xl font-extrabold">Edit Course</h1>
+        }
+        @else{
+            <h1 class="text-center text-xl font-extrabold">New Course</h1>
+        }
+
+        <form [formGroup]="courseForm">
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="courseName">Course Name</label>
+                    <span class="text-red-500">*</span>
+                </div>
+                <input pInputText id="courseName" formControlName="courseName" />
+                @if (courseForm.get('courseName')?.errors && courseForm.get('courseName')?.touched){
+                @if(courseForm.get('courseName')?.hasError('required')){
+                <small class="text-red-500">Please Enter Course Name</small>
+                }
+                @else if(courseForm.get('courseName')?.hasError('minlength')){
+                <small class="text-red-500">Please Enter At Least 3 Charcters</small>
+                }
+                }
+            </div>
+
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="instructorName">Instructor Name</label>
+                    <span class="text-red-500">*</span>
+                </div>
+                <input pInputText id="instructorName" formControlName="instructor" />
+                @if (courseForm.get('instructor')?.errors && courseForm.get('instructor')?.touched){
+                @if(courseForm.get('instructor')?.hasError('required')){
+                <small class="text-red-500">Please Enter Instructor Name</small>
+                }
+                }
+            </div>
+
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="category">Category</label>
+                    <span class="text-red-500">*</span>
+                </div>
+                <input pInputText id="category" formControlName="category" />
+                @if (courseForm.get('category')?.errors && courseForm.get('category')?.touched){
+                @if(courseForm.get('category')?.hasError('required')){
+                <small class="text-red-500">Please Enter Category</small>
+                }
+                }
+            </div>
+
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="duration">Duration</label>
+                    <span class="text-red-500">*</span>
+                </div>
+                <p-inputnumber inputId="duration" formControlName="duration" />
+                @if (courseForm.get('duration')?.errors && courseForm.get('duration')?.touched){
+                @if(courseForm.get('duration')?.hasError('required')){
+                <small class="text-red-500">Please Enter Duration</small>
+                }
+                @if(courseForm.get('duration')?.hasError('min')){
+                <small class="text-red-500">Duration Must be Greater Than 0</small>
+                }
+                }
+            </div>
+
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="price">Price</label>
+                    <span class="text-red-500">*</span>
+                </div>
+                <p-inputnumber inputId="price" mode="currency" currency="USD" formControlName="price" />
+            </div>
+
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="price">Description</label>
+                </div>
+                <textarea rows="5" cols="30" pTextarea formControlName="description"></textarea>
+                @if (courseForm.get('description')?.errors && courseForm.get('description')?.touched){
+                @if(courseForm.get('description')?.hasError('maxlength')){
+                <small class="text-red-500">Description Musn't Exceed 500 Charcter</small>
+                }
+                }
+            </div>
+
+            <div class="flex flex-col gap-1 mt-3">
+                <div>
+                    <label for="status">Status</label>
+                    <span class="text-red-500">*</span>
+                </div>
+                <p-select [options]="statuses" formControlName="status" optionLabel="label"
+                    placeholder="Select a Status" class="w-full md:w-56" />
+                @if (courseForm.get('status')?.errors && courseForm.get('status')?.touched){
+                @if(courseForm.get('status')?.hasError('required')){
+                <small class="text-red-500">Please Select Status</small>
+                }
+                }
+            </div>
+
+            <div class="card flex justify-center mt-3">
+                <p-button label="Save" class="w-full" (click)="addEditCourse()" />
+            </div>
+        </form>
+
+        <p-toast />
+    </div>
+</div>

@@ -1,0 +1,142 @@
+{
+  "courses": [
+    {
+      "courseName": "Angular Fundamentals",
+      "instructor": "Ahmed Ali",
+      "category": "Frontend",
+      "duration": 200,
+      "price": 1500,
+      "status": "active",
+      "createdDate": [
+        "2026-5-27"
+      ],
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "courseName": "Html Fundamentals",
+      "instructor": "mostafa Ayman",
+      "category": "Frontend",
+      "duration": 10,
+      "price": 1000,
+      "status": {
+        "id": "active",
+        "label": "Active"
+      },
+      "createdDate": "2026-06-01"
+    },
+    {
+      "courseName": "Css Fundamentals",
+      "instructor": "Adel Ayman",
+      "category": "Frontend",
+      "duration": 100,
+      "price": 500,
+      "status": {
+        "id": "active",
+        "label": "Active"
+      },
+      "createdDate": [
+        "2026-5-27"
+      ],
+      "id": "3"
+    },
+    {
+      "courseName": "JS Fundamentals",
+      "instructor": "mohamed Hany",
+      "category": "Frontend",
+      "duration": 300,
+      "price": 2500,
+      "status": {
+        "id": "active",
+        "label": "Active"
+      },
+      "createdDate": [
+        "2026-5-27"
+      ],
+      "id": "4"
+    },
+    {
+      "courseName": "Responsive UI Fundamentals",
+      "instructor": "shady mohsenn",
+      "category": "Frontend",
+      "duration": 5,
+      "price": 300,
+      "status": {
+        "id": "active",
+        "label": "Active"
+      },
+      "createdDate": [
+        "2026-5-27"
+      ],
+      "id": "5"
+    },
+    {
+      "courseName": "BIM",
+      "instructor": "safa",
+      "category": "technical",
+      "duration": 50,
+      "price": 0,
+      "description": "the is for power BI",
+      "status": "inactive",
+      "createdDate": "2026-5-25",
+      "id": "EpNCCp3CLhE"
+    },
+    {
+      "courseName": "BIM",
+      "instructor": "ayat",
+      "category": "eww",
+      "duration": 70,
+      "price": 321,
+      "description": "this bi",
+      "status": {
+        "id": "inactive",
+        "label": "Inactive"
+      },
+      "createdDate": "2026-5-25",
+      "id": "Ph6f0WokJQg"
+    },
+    {
+      "courseName": "angular",
+      "instructor": "dssa",
+      "category": "wqqwq",
+      "duration": 2,
+      "price": 0,
+      "description": "",
+      "status": {
+        "id": "active",
+        "label": "Active"
+      },
+      "createdDate": "2026-5-27",
+      "id": "8rxoCrAmSsQ"
+    },
+    {
+      "courseName": "cds",
+      "instructor": "csdc",
+      "category": "cds",
+      "duration": 20,
+      "price": 0,
+      "description": "",
+      "status": {
+        "id": "active",
+        "label": "Active"
+      },
+      "createdDate": "2026-5-27",
+      "id": "qnjivwhGeH4"
+    },
+    {
+      "courseName": "csd",
+      "instructor": "csdcs",
+      "category": " xc ",
+      "duration": 20,
+      "price": 0,
+      "description": "",
+      "status": {
+        "id": "inactive",
+        "label": "Inactive"
+      },
+      "createdDate": "2026-5-27",
+      "id": "59-lG5Rlc4M"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

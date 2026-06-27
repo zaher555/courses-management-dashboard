@@ -1,0 +1,58 @@
+<i class="pi pi-arrow-circle-left cursor-pointer" (click)="backToList()"></i>
+<div class="flex justify-center items-center h-screen">
+    <div class="grid grid-cols-4 w-1/2 bg-black p-8 gap-8">
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-book"></i>
+            </div>
+            <p>{{(course$ | async)?.courseName}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-user"></i>
+            </div>
+            <p>{{(course$ | async)?.instructor}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-bars"></i>
+            </div>
+            <p>{{(course$ | async)?.category}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-clock"></i>
+            </div>
+            <p>{{(course$ | async)?.duration}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-pound"></i>
+            </div>
+            <p>{{(course$ | async)?.price}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                @if((course$ | async)?.status?.label === 'Active'){
+                <i class="pi pi-verified"></i>
+                }
+                @else {
+                <i class="pi pi-times-circle"></i>
+                }
+            </div>
+            <p>{{(course$ | async)?.status?.label}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-receipt"></i>
+            </div>
+            <p>{{(course$ | async)?.description ?? '-'}}</p>
+        </div>
+        <div class="bg-white flex flex-col items-center p-4 text-center">
+            <div class="">
+                <i class="pi pi-calendar"></i>
+            </div>
+            <p>{{(course$ | async)?.createdDate}}</p>
+        </div>
+    </div>
+</div>
